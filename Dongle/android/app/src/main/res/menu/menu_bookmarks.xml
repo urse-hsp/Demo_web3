@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/dapp_browser_menu">
+        <item
+            android:id="@+id/action_reload"
+            android:icon="@drawable/ic_dapp_reload"
+            android:orderInCategory="1"
+            android:title="@string/action_reload"
+            app:showAsAction="withText" />
+
+        <item
+            android:visible="false"
+            android:id="@+id/action_network"
+            android:icon="@drawable/ic_network_2"
+            android:orderInCategory="7"
+            android:title="@string/action_update_network"
+            app:showAsAction="withText" />
+
+    </group>
+</menu>

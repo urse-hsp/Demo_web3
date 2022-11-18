@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/release/x86_64'
+ninja: no work to do.

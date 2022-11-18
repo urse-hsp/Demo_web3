@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputView">
+        <attr name="label" format="integer" />
+        <attr name="imeOptions" format="string" />
+        <attr name="lines" format="integer" />
+        <attr name="inputType" format="string" />
+        <attr name="minHeightValue" format="integer" />
+        <attr name="innerPadding" format="integer" />
+        <attr name="hint" format="string" />
+        <attr name="ens" format="boolean" />
+        <attr name="nocam" format="boolean" />
+        <attr name="show_header" format="boolean" />
+        <attr name="can_change_currency" format="boolean" />
+        <attr name="show_allFunds" format="boolean" />
+        <attr name="show_paste" format="boolean" />
+        <attr name="font_size" format="integer" />
+        <attr name="showChainName" format="boolean" />
+        <attr name="currencyMode" format="boolean" />
+        <attr name="invert" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TokenIcon">
+        <attr name="square" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ERC721ImageView">
+        <attr name="webview_height" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CopyTextView">
+        <attr name="text" format="string" />
+        <attr name="showToast" format="boolean" />
+        <attr name="bold" format="boolean" />
+        <attr name="removePadding" format="boolean" />
+        <attr name="marginRight" format="dimension" />
+        <attr name="textColor" format="color"/>
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="SignDataWidget">
+        <attr name="noTitle" format="boolean" />
+    </declare-styleable>
+</resources>

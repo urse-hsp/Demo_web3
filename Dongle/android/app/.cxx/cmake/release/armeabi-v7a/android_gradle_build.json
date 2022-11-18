@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/release/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/release/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "keys-Release-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/release/armeabi-v7a",
+        "keys"
+      ],
+      "buildType": "release",
+      "abi": "armeabi-v7a",
+      "artifactName": "keys",
+      "output": "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/build/intermediates/cmake/release/obj/armeabi-v7a/libkeys.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

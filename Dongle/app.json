@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "KeepToken",
+    "slug": "native-rn-keeptoken-app",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "version": "1.0.0",
+    "splash": {
+      "image": "./assets/img/ic_splash_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

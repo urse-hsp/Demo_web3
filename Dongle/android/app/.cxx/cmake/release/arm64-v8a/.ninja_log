@@ -1,0 +1,10 @@
+# ninja log v5
+0	85	1646058001	CMakeFiles/keys.dir/keys.c.o	e32526dd4d0f1378
+85	139	1646058001	/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/build/intermediates/cmake/release/obj/arm64-v8a/libkeys.so	e91c81a73b330ec2
+0	11	0	clean	bef276a4e3614098
+1	156	1646204738	CMakeFiles/keys.dir/keys.c.o	e32526dd4d0f1378
+156	286	1646204738	/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/build/intermediates/cmake/release/obj/arm64-v8a/libkeys.so	e91c81a73b330ec2
+0	16	0	clean	bef276a4e3614098
+0	18	0	clean	bef276a4e3614098
+0	87	1646915194	CMakeFiles/keys.dir/keys.c.o	e32526dd4d0f1378
+87	148	1646915194	/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/build/intermediates/cmake/release/obj/arm64-v8a/libkeys.so	e91c81a73b330ec2

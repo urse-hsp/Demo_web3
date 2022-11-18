@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp">
+
+        <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp16"
+            android:background="@color/transparent"
+            android:contentDescription="@string/action_close"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/text_sign_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_toStartOf="@id/logo"
+            android:layout_toEndOf="@id/image_close"
+            android:fontFamily="@font/font_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/dialog_title_sign_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:visibility="invisible"
+            android:contentDescription="@string/app_name"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logo"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <com.nativernkeeptokenapp.widget.AddressDetailView
+        android:id="@+id/requester"
+        custom:label="@string/requester_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mercury" />
+
+    <com.nativernkeeptokenapp.widget.SignDataWidget
+        android:id="@+id/sign_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mercury" />
+
+    <com.nativernkeeptokenapp.widget.ConfirmationWidget
+        android:id="@+id/confirmation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.nativernkeeptokenapp.widget.FunctionButtonBar
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

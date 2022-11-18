@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/debug/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/debug/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "keys-Debug-x86": {
+      "buildCommandComponents": [
+        "/Users/eilian/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/.cxx/cmake/debug/x86",
+        "keys"
+      ],
+      "buildType": "debug",
+      "abi": "x86",
+      "artifactName": "keys",
+      "output": "/Users/eilian/Desktop/native-rn-keeptoken-app/android/app/build/intermediates/cmake/debug/obj/x86/libkeys.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

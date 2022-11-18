@@ -1,0 +1,1 @@
+运行 react-native run-android
