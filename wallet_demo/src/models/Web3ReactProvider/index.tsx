@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import Web3 from './Web3'
+import Storage from './storage'
 
 const models = {
-  // Utils,
-  Storage,
-  // Web3,
+  Web3,
+  // Storage,
 }
 
 function compose(containers: any) {
@@ -19,11 +20,8 @@ function compose(containers: any) {
 
 const ComposedStore = compose(Object.values(models))
 
-function Store({ children }: any) {
+function Web3ReactProvider({ children }: any) {
   return <ComposedStore>{children}</ComposedStore>
 }
 
-const Index = () => {
-  return <></>
-}
-export default React.memo(Index)
+export default React.memo(Web3ReactProvider)
