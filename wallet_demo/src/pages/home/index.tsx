@@ -2,6 +2,7 @@ import { log } from 'console'
 import React, { useState, useEffect } from 'react'
 import Web3 from '../../models/Web3ReactProvider/Web3'
 import Storage from '../../models/Web3ReactProvider/storage'
+import utils from '../../models/Web3ReactProvider/utils'
 
 interface IndexType {
   isVisible?: boolean
@@ -11,7 +12,9 @@ interface IndexType {
 const Index: React.FC<IndexType> = (props) => {
   let { account, connect, disconnect } = Web3.useContainer()
   // const res = Storage.useContainer()
-  // console.log(res, 'res')
+
+  const res = utils.useContainer()
+  console.log(res, 'res')
 
   const block = () => {
     console.log('退出')

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Web3 from './Web3'
 import Storage from './storage'
+import utils from './utils'
 
 // 注意排序，
 const models = {
   Storage,
   Web3,
+  utils,
 }
 
 function compose(containers: any) {
