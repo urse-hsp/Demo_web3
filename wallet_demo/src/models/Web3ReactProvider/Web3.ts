@@ -3,20 +3,17 @@ import { createContainer } from 'unstated-next'
 import detectEthereumProvider from '@metamask/detect-provider'
 import chains from '../../config/network.chains.json'
 import Web3 from 'web3'
-// import Storage from './storage'
+import Storage from './storage'
 
 const useWeb3Hook = (): any => {
   // Web3
   const [web3, setWeb3] = useState<any>(null)
   const [provider, setProvider] = useState<any>(null)
   const [currentAccount, setCurrentAccount] = useState<any>(null)
-
-  // const { walletType, networkId } = Storage.useContainer()
-  const walletType = 'MetaMask',
-    networkId = 1230
+  const { walletType, networkId, setNetworkId } = Storage.useContainer()
 
   const handleConnect = useCallback(
-    async (network_id: any, wallet_type: any, auto_connect: boolean) => {
+    async (network_id: number, wallet_type: string, auto_connect?: boolean) => {
       // 限制支持链
       let chainsInfo = chains.find((item: any) => {
         return item.networkId === Number(network_id)
@@ -86,6 +83,7 @@ const useWeb3Hook = (): any => {
                   params: [params],
                 })
               } catch (addError: any) {
+                console.log(666666)
                 alert(addError.message)
                 return addError.message
               }
@@ -180,10 +178,10 @@ const useWeb3Hook = (): any => {
       // We recommend reloading the page unless you have good reason not to.
       const chainIdValue =
         chainId.toString().indexOf('0x') === 0 ? parseInt(chainId, 16) : chainId
-      let network = chains.find((element: any) => {
+      let network: any = chains.find((element: any) => {
         return element.chainId === Number(chainIdValue)
       })
-      // setNetworkId(network.networkId)
+      setNetworkId(network.networkId)
       window.location.reload()
     })
 
@@ -191,15 +189,20 @@ const useWeb3Hook = (): any => {
     provider.once('disconnect', async () => {
       await handleDisconnect()
     })
-  }, [provider, currentAccount, handleDisconnect])
+  }, [provider, currentAccount, handleDisconnect, setNetworkId])
 
   return {
     web3,
     provider,
-    currentAccount,
-    a: 1,
+    account: currentAccount,
+    active: !!currentAccount,
+    async connect(chain_id: number, wallet_type: string) {
+      return await handleConnect(chain_id, wallet_type)
+    },
+    async disconnect() {
+      return await handleDisconnect()
+    },
   }
 }
 
-const web3 = createContainer(useWeb3Hook)
-export default web3
+export default createContainer(useWeb3Hook)

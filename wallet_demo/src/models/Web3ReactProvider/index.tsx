@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Web3 from './Web3'
 import Storage from './storage'
 
+// 注意排序，
 const models = {
+  Storage,
   Web3,
-  // Storage,
 }
 
 function compose(containers: any) {
