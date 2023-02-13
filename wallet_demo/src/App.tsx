@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='App'>
       <Web3ReactProvider>
-        <Home />1
+        <Home />
       </Web3ReactProvider>
     </div>
   )

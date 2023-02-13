@@ -3,6 +3,7 @@ import { createContainer } from 'unstated-next'
 import detectEthereumProvider from '@metamask/detect-provider'
 import chains from '../../config/network.chains.json'
 import Web3 from 'web3'
+import { ethers } from 'ethers'
 import Storage from './storage'
 
 const useWeb3Hook = (): any => {
@@ -28,7 +29,7 @@ const useWeb3Hook = (): any => {
         let providerInstance: any = null // 钱包实例 provider
         switch (wallet_type) {
           case 'MetaMask':
-            providerInstance = await detectEthereumProvider()
+            providerInstance = await detectEthereumProvider() // eth实例 window.ethereum
             break
           default:
             providerInstance = await detectEthereumProvider()
@@ -40,7 +41,8 @@ const useWeb3Hook = (): any => {
         if (providerInstance) {
           const accounts = await providerInstance.request({
             method: 'eth_requestAccounts',
-          })
+          }) //
+          console.log(accounts, 'accountslist')
           account = accounts[0]
         } else {
           if (!auto_connect) {
@@ -100,7 +102,23 @@ const useWeb3Hook = (): any => {
           }
         }
 
-        let web3instance = new Web3(providerInstance) // web3实例
+        let web3instance, Account
+        if (false) {
+          // web3.js
+          web3instance = new Web3(providerInstance) // web3实例
+          Account = web3instance.utils.toChecksumAddress(account)
+        } else {
+          // ethers.js
+          // const provider = new ethers.providers.Web3Provider(window.ethereum)
+          web3instance = new ethers.providers.Web3Provider(providerInstance) // ethers
+          // Account = ethers.utils.getAddress(account)
+          Account = await web3instance._getAddress(account)
+        }
+
+        // Set
+        setWeb3(web3instance)
+        setProvider(providerInstance)
+        setCurrentAccount(Account)
 
         // 合约实例
         // let CONTRACT_ACCOUNT = CONFIG.networks[network_id].contracts
@@ -112,15 +130,6 @@ const useWeb3Hook = (): any => {
         //   tokenMapping,
         //   CONTRACT_ACCOUNT.mappingToken // 0x76A2AAa066201bfB6d7317752C544ED7A5d8233a
         // )
-
-        // Set
-        setWeb3(web3instance)
-        setProvider(providerInstance)
-        setCurrentAccount(web3instance.utils.toChecksumAddress(account))
-        console.log(
-          web3instance.utils.toChecksumAddress(account),
-          'web3instance.utils.toChecksumAddress(account)'
-        )
 
         return null
       } catch (e: any) {
@@ -184,6 +193,14 @@ const useWeb3Hook = (): any => {
       setNetworkId(network.networkId)
       window.location.reload()
     })
+
+    // provider.on("network", (newNetwork, oldNetwork) => {
+    //     // 当 Provider 建立初始连接时，它会 emits 一个 "network" 事件，并且 oldNetwork 为空
+    //     // 一旦 oldNetwork 不为空，就表示网络发生了变化
+    //     if (oldNetwork) {
+    //         window.location.reload();
+    //     }
+    // });
 
     // 订阅提供商断开连接 / Subscribe to provider disconnection
     provider.once('disconnect', async () => {
