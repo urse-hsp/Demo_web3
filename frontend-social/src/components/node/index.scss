@@ -1,0 +1,33 @@
+.node {
+  .container {
+    // max-width: 768px;
+  }
+  .node-wrap {
+    background-color: #fff;
+    padding: 10px;
+  }
+  .node-top {
+    text-align: center;
+    padding: 40px 0;
+  }
+  .icon {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .topic-list {
+    padding-top: 10px;
+    border-top: 2px solid #000;
+  }
+}
+@media screen and (max-width: 768px) {
+  .node {
+    .node-wrap {
+      border-radius: 3px;
+    }
+    .node-top {
+      text-align: left;
+      padding: 40px 0;
+    }
+  }
+}

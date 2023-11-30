@@ -1,0 +1,162 @@
+.address {
+	a {
+		text-decoration: none;
+	}
+	.show-address {
+		opacity: 0.35;
+	}
+	.address-desc {
+		margin-top: 10px;
+	}
+	.more {
+		opacity: 0.6;
+		cursor: pointer;
+		display: inline-block;
+		height: 33px;
+		line-height: 45px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.container {
+		// max-width: 768px;
+	}
+
+	.node-info {
+		margin-bottom: 0;
+		.avatar {
+			width: 180px;
+			height: 180px;
+			display: inline-block;
+			border-radius: 22px;
+		}
+	}
+	.address-wrap {
+		background-color: #fff;
+		padding: 10px;
+		margin-top: 20px;
+		h1 {
+			font-size: 64px;
+		}
+
+		.node-des {
+			a {
+				display: inline-block;
+				margin-left: 5px;
+				.chat {
+					border-radius: 50%;
+					width: 32px;
+					height: 32px;
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		.address-assets {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			user-select: none;
+			opacity: 0.8;
+			.following {
+				display: inline-block;
+				margin-right: 10px;
+			}
+			li {
+				list-style: none;
+				display: inline-block;
+				margin-right: 5px;
+				a {
+					display: block;
+				}
+				img {
+					display: block;
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+				}
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+		.other-chain {
+			border-top: 1px solid #ccc;
+			padding-top: 10px;
+			li {
+				list-style: none;
+				font-size: 14px;
+				height: 20px;
+				line-height: 20px;
+			}
+			span {
+				user-select: none;
+				display: inline-block;
+				min-width: 70px;
+			}
+		}
+	}
+	.all-topics {
+		background-color: #fff;
+		padding: 10px;
+		margin-top: 20px;
+	}
+	.all-replys {
+		background-color: #fff;
+		padding: 10px;
+		margin-top: 20px;
+	}
+	.all-follow {
+		margin-top: 40px;
+		.follow-item {
+			margin-bottom: 20px;
+			list-style: none;
+			.link {
+				cursor: pointer;
+				&:hover {
+					color: rgb(10, 0, 194);
+				}
+			}
+		}
+		.follow-img img {
+			display: block;
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+		}
+		.follow-main {
+			margin-left: 20px;
+			margin-top: 12px;
+		}
+	}
+	.area-top {
+		user-select: none;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px dotted #ccc;
+	}
+	// .null {
+	//   text-align: center;
+	//   padding: 50px 0;
+	//   opacity: 0.5;
+	// }
+	.reply-top {
+		// background-color: #fff;
+		padding: 2px 0;
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.address {
+		.node-info {
+			h1 {
+				font-size: 26px;
+			}
+			.avatar {
+				width: 120px;
+				height: 120px;
+				border-radius: 16px;
+			}
+		}
+	}
+}

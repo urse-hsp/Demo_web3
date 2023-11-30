@@ -1,0 +1,25 @@
+.footer {
+	background-color: #ffffff;
+	border-top: 1px dotted #ccc;
+	padding: 20px 0;
+	font-size: 14px;
+	h2 {
+		font-size: 16px;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			// background-color: #e8e8e8;
+		}
+		&:active {
+			font-weight: normal;
+		}
+		&:visited {
+			color: #424242;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.footer {
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"name": "FIBO",
+	"chainId": 1230,
+	"networkId": 1230,
+	"explorer_tx": "https://scan.fibochain.org/tx",
+
+	"contracts": {
+		"social": "0x6abB2932c1eeDCa7ceE000E4A34Ba23822AAe137"
+	}
+}

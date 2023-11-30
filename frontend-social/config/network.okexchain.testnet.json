@@ -1,0 +1,10 @@
+{
+	"name": "OEC-Test",
+	"chainId": 65,
+	"networkId": 65,
+	"explorer_tx": "https://www.oklink.com/zh-cn/okc-test/tx",
+
+	"contracts": {
+		"social": "0xCd4F399e361CC58D398549cfa839B7DC4fE1Ad18"
+	}
+}

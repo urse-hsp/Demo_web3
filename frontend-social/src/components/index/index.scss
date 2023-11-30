@@ -1,0 +1,249 @@
+.home {
+	a {
+		text-decoration: none;
+		display: inline-block;
+	}
+	span {
+		display: inline-block;
+		margin-right: 10px;
+		i {
+			display: inline-block;
+			margin-left: 0px;
+		}
+	}
+	.home-main,
+	.sidebar-item {
+		background-color: #fff;
+	}
+	.clear {
+		font-size: 14px;
+		color: #778087;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.home-main {
+		margin-right: 20px;
+		max-width: calc(100% - 220px);
+
+		.nodes {
+			display: none;
+			user-select: none;
+			padding: 4px 0;
+			border-radius: 4px 4px 0 0;
+			margin-bottom: 10px;
+			li {
+				border-bottom: none;
+				display: inline-block;
+				font-size: 14px;
+				line-height: 14px;
+				padding: 5px 8px;
+				margin-right: 5px;
+				cursor: pointer;
+				&:hover {
+					background-color: #ccc;
+				}
+			}
+			.nodes-first {
+				border-bottom: 1px solid #ccc;
+				li {
+					border-radius: 3px 3px 0 0;
+					position: relative;
+					top: 1px;
+				}
+				li.active {
+					background-color: #000;
+					color: #fff;
+				}
+			}
+			.nodes-sub {
+				background-color: #f3f3f3;
+				li {
+					border-radius: 0;
+				}
+				li.active {
+					background-color: #000;
+					color: #fff;
+				}
+			}
+		}
+		.topic-list {
+			// margin-bottom: 10px;
+		}
+	}
+
+	.home-sidebar {
+		display: block;
+		width: 200px;
+		a {
+			color: #778087;
+			font-size: 14px;
+		}
+		h2 {
+			font-size: 16px;
+		}
+		.sidebar-item {
+			margin-bottom: 20px;
+			// padding: 10px;
+			li {
+				list-style: none;
+				border-bottom: 1px dotted #ccc;
+				padding: 5px 0;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+			&:first-child {
+				border-top: none;
+				// padding-top: 0;
+			}
+		}
+
+		.address-info {
+			.address-des {
+				margin-left: 10px;
+				font-size: 14px;
+				.address-name {
+					font-size: 16px;
+					display: inline-block;
+					a {
+						color: #000;
+					}
+				}
+			}
+			.address-action {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				.item {
+					width: 40px;
+					height: 40px;
+					padding: 5px;
+					text-align: center;
+					border-radius: 50%;
+					border: 1px solid #ccc;
+					font-size: 14px;
+					opacity: 0.6;
+					cursor: pointer;
+					&:hover {
+						background-color: #ccc;
+					}
+				}
+			}
+		}
+		.nodes {
+			padding-top: 8px;
+			a {
+				display: inline-block;
+				text-align: center;
+				text-decoration: none;
+				vertical-align: middle;
+				color: #5d5d5d;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				padding: 2px 8px;
+				font-size: 14px;
+				user-select: none;
+				margin-right: 2px;
+				margin-bottom: 2px;
+			}
+		}
+		.statistics {
+			font-size: 14px;
+			padding-top: 8px;
+		}
+	}
+}
+.create {
+	.create-wrap {
+		background-color: #fff;
+		padding: 10px;
+		.edit-wrap {
+			margin-top: 10px;
+		}
+		.select-area {
+			margin-bottom: 10px;
+			vertical-align: middle;
+			.select-node {
+				width: 300px;
+			}
+			a {
+				text-decoration: none;
+				line-height: 3;
+			}
+		}
+		.submit {
+			height: 36px;
+			line-height: 100%;
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		}
+	}
+	.editor-preview {
+		h1 {
+			font-size: 28px;
+			margin: 22px 0 20px;
+		}
+		h2 {
+			font-size: 24px;
+			margin: 22px 0 18px;
+		}
+		h3 {
+			font-size: 20px;
+			margin: 20px 0 16px;
+		}
+		ul {
+			margin: 15px 0 15px 20px;
+			padding: 0;
+		}
+		ol {
+			margin: 15px 0 15px 20px;
+			padding: 0;
+		}
+		p {
+			font-size: 16px;
+			line-height: 1.6;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		pre {
+			background: #eee;
+			margin-bottom: 10px;
+			max-width: 100%;
+			overflow-y: scroll;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.null {
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	opacity: 0.5;
+	// border: 1px dashed #ccc;
+}
+
+@media screen and (max-width: 768px) {
+	.create {
+		.create-wrap {
+			border-radius: 3px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home {
+		.home-main {
+			max-width: 100%;
+			margin-right: 0;
+			border-radius: 3px;
+		}
+		.home-sidebar {
+			display: none;
+		}
+	}
+}

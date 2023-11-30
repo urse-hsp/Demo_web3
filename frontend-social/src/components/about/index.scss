@@ -1,0 +1,39 @@
+.about {
+  ul {
+    margin-bottom: 20px;
+  }
+  li {
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+  }
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    i {
+      display: inline-block;
+      margin-left: 0px;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+  }
+  h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
